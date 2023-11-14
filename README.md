@@ -23,4 +23,4 @@ Build tool - Maven
 
 Framework - Spring Boot
 
-Languege - Java 17
+Programming language - Java 17
