@@ -22,6 +22,10 @@ public class CreateNewAuctionsThread implements Runnable{
 
     private final NotificationService notificationService;
 
+    private static final int NUM_PLAYERS = 10;
+    private final Random random = new Random();
+    private final Faker faker = new Faker();
+
 
     @Override
     public void run() {
@@ -37,10 +41,8 @@ public class CreateNewAuctionsThread implements Runnable{
 
     private ArrayList<Player> generatePlayers() {
         var players = new ArrayList<Player>();
-        var random = new Random();
-        var faker = new Faker();
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < NUM_PLAYERS; i++) {
             var atk = random.nextInt(100);
             var def = random.nextInt(100);
             var pms = random.nextInt(100);
